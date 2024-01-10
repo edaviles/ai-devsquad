@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "OT2qsWroUL40eVPg5NIueCa6OOCBByzsLe4xaA7ZBK0=",
+  "Source": "devsquad",
+  "BasePath": "_content/devsquad",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "devsquad\\wwwroot",
+      "Source": "devsquad",
+      "ContentRoot": "C:\\Users\\edaviles\\code\\devsquad\\wwwroot\\",
+      "BasePath": "_content/devsquad",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\edaviles\\code\\devsquad\\wwwroot\\default.html",
+      "SourceId": "devsquad",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\edaviles\\code\\devsquad\\wwwroot\\",
+      "BasePath": "_content/devsquad",
+      "RelativePath": "default.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\default.html"
+    }
+  ]
+}
