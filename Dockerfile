@@ -12,17 +12,17 @@ USER appuser
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG configuration=Release
 WORKDIR /src
-COPY ["EchoBot.csproj", "./"]
-RUN dotnet restore "EchoBot.csproj"
+COPY ["devsquad.csproj", "./"]
+RUN dotnet restore "devsquad.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "EchoBot.csproj" -c $configuration -o /app/build
+RUN dotnet build "devsquad.csproj" -c $configuration -o /app/build
 
 FROM build AS publish
 ARG configuration=Release
-RUN dotnet publish "EchoBot.csproj" -c $configuration -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "devsquad.csproj" -c $configuration -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "EchoBot.dll"]
+ENTRYPOINT ["dotnet", "devsquad.dll"]
