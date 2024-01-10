@@ -34,22 +34,13 @@ namespace EchoBot.Bots
                 DeploymentName = deployment,
                 Messages =
                 {
-                    //new ChatRequestSystemMessage(ChatRole.System, system),
-                    //new ChatRequestSystemMessage(ChatRole.User, turnContext.Activity.Text),
-
                     // The system message represents instructions or other guidance about how the assistant should behave
                     new ChatRequestSystemMessage(system),
                     // User messages represent current or historical input from the end user
                     new ChatRequestUserMessage(turnContext.Activity.Text),
-                    // Assistant messages represent historical responses from the assistant
-                    //new ChatRequestAssistantMessage("Arrrr! Of course, me hearty! What can I do for ye?"),
-                    //new ChatRequestUserMessage("What's the best way to train a parrot?")
                 },
                 MaxTokens = int.Parse(tokens)
             };
-
-
-            //Response<ChatCompletions> response = client.GetChatCompletions(deploymentOrModelName: deployment,chatCompletionsOptions);
 
             Response<ChatCompletions> response = client.GetChatCompletions(chatCompletionsOptions);
 
