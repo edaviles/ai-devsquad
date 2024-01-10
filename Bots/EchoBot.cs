@@ -31,7 +31,7 @@ namespace EchoBot.Bots
 
             var chatCompletionsOptions = new ChatCompletionsOptions()
             {
-                DeploymentName = "gpt-3.5-turbo",
+                DeploymentName = deployment,
                 Messages =
                 {
                     //new ChatRequestSystemMessage(ChatRole.System, system),
